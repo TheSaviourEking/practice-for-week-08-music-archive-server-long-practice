@@ -272,6 +272,7 @@ const server = http.createServer((req, res) => {
       // DELETE /songs/:songId
       if (req.method === 'DELETE' && req.url.match(/^\/songs\/\d+$/)) {
 	  const songId = req.url.split('/')[2];
+	  
 	  if (songs.hasOwnProperty(songId)) {
 	      delete songs[songId];
 
